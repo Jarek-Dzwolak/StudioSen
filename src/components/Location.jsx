@@ -3,6 +3,7 @@ import React from "react";
 function Location() {
   return (
     <section
+      id="#Location"
       className="py-12"
       style={{ backgroundColor: "rgb(244, 244, 234)" }}>
       <div className="container mx-auto px-4">

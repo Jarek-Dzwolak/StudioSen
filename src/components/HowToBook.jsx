@@ -12,6 +12,7 @@ function HowToBook() {
 
   return (
     <section
+      id="#HowToBook"
       className="pt-12 md:flex md:items-center"
       style={{ backgroundColor: "rgb(244, 244, 234)" }}>
       <div className="container mx-auto px-4">
@@ -35,7 +36,7 @@ function HowToBook() {
                 className="flex items-center justify-center 
                  px-4 py-2.5 lg:px-6 lg:py-4 text-lg text-black font-medium rounded-full duration-300 bg-gray-400 hover:bg-gray-600"
                 onClick={toggleModal}>
-                Kiedy nie robić ?
+                Zastrzeżenia
               </button>
             </div>
             <h3 className="text-xl font-semibold mb-4">
