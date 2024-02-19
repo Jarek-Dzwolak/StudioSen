@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
+import { Link } from "react-scroll";
 import Logo from "../img/logo-removebg.png";
 
 const navigation = [
-  { name: "O nas", href: "#" },
-  { name: "Jak się umuwić", href: "#" },
-  { name: "Lokalizacja", href: "#" },
-  { name: "Nasza ekipa", href: "#" },
+  { name: "O nas", href: "AboutUs" },
+  { name: "Jak się umuwić", href: "HowToBook" },
+  { name: "Lokalizacja", href: "Location" },
+  { name: "Nasza ekipa", href: "Team" },
 ];
 
 export default function Header() {
@@ -38,12 +40,12 @@ export default function Header() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900">
+                className="text-sm font-semibold hover:gray-400 leading-6 text-gray-900">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
