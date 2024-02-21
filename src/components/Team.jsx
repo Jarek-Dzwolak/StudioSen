@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal_Team";
 import Jarek_photo from "../img/Jarek.jpg";
+import Jola_photo from "../img/Jola_photo.jpeg";
 
 function Team() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,9 +13,8 @@ function Team() {
   const people = [
     {
       name: "Jola Akslar",
-      role: "Właścicielka / Tatuażysta",
-      imageUrl:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      role: "Właściciel / Tatuażysta",
+      imageUrl: Jola_photo,
     },
     {
       name: "Jarek Dzwolak",
@@ -31,8 +31,8 @@ function Team() {
             Poznaj naszą ekipe
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae
-            elementum enim vitae ullamcorper suspendisse.
+            Jesteśmy zgranym zespołem, gotowym sprostać każdym wyzwanią. Nasza
+            pasja i zaangażowanie to nasza siła, która napędza nas do działania.
           </p>
         </div>
         <ul

@@ -7,6 +7,7 @@ import Logo from "../img/Logo.png";
 const navigation = [
   { name: "O nas", href: "#AboutUs" },
   { name: "Jak się umuwić", href: "#HowToBook" },
+  { name: "Pielegnacja", href: "#Care" },
   { name: "Lokalizacja", href: "#Location" },
   { name: "Nasza ekipa", href: "#Team" },
 ];

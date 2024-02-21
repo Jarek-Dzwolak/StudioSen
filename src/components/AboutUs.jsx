@@ -17,16 +17,20 @@ function AboutUs() {
           <div>
             <h2 className="text-3xl  font-bold mb-4">O nas</h2>
             <p className=" leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Jesteśmy studio tatuażu, które stawia na klienta. Naszą główną
+              misją jest zapewnienie satysfakcji każdej osoby, która zdecyduje
+              się skorzystać z naszych usług. Dlatego też, nasze podejście jest
+              całkowicie klientocentryczne. Każdy klient jest dla nas niezwykle
+              ważny, a jego zadowolenie to nasz priorytet.
             </p>
             <p className=" leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              Indywidualne podejście do każdego klienta to nasza dewiza.
+              Rozumiemy, że każdy ma inne potrzeby i oczekiwania, dlatego
+              dokładamy wszelkich starań, by sprostać oczekiwaniom każdej osoby,
+              która przekracza nasz próg. Nie ma dla nas rzeczy niemożliwych,
+              każdy problem staramy się rozwiązać na korzyść naszych gości,
+              zapewniając im komfort i profesjonalną obsługę na najwyższym
+              poziomie.
             </p>
           </div>
         </div>
