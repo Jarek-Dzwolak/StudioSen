@@ -16,21 +16,20 @@ function AboutUs() {
 
           <div>
             <h2 className="text-3xl  font-bold mb-4">O nas</h2>
-            <p className=" leading-relaxed mb-6">
-              Jesteśmy studio tatuażu, które stawia na klienta. Naszą główną
-              misją jest zapewnienie satysfakcji każdej osoby, która zdecyduje
-              się skorzystać z naszych usług. Dlatego też, nasze podejście jest
-              całkowicie klientocentryczne. Każdy klient jest dla nas niezwykle
-              ważny, a jego zadowolenie to nasz priorytet.
+            <p className=" leading-loose mb-6">
+              Naszą główna misja jest zapewnienie satysfakcji każdej osobie
+              która zdecyduje się skorzystać z naszych usług. Szczycimy się
+              indywidualnym podejściem do klienta. Rozumiemy, że każdy ma inne
+              potrzeby i oczekiwania, dlatego dokładamy wszelkich starań, by
+              sprostać oczekiwaniom każdego , kto przekracza nasz próg. Do
+              każdego projektu podchodzimy personalnie – wasze zadowolenie z
+              wykonanej pracy to nasz priorytet.
             </p>
-            <p className=" leading-relaxed">
-              Indywidualne podejście do każdego klienta to nasza dewiza.
-              Rozumiemy, że każdy ma inne potrzeby i oczekiwania, dlatego
-              dokładamy wszelkich starań, by sprostać oczekiwaniom każdej osoby,
-              która przekracza nasz próg. Nie ma dla nas rzeczy niemożliwych,
-              każdy problem staramy się rozwiązać na korzyść naszych gości,
-              zapewniając im komfort i profesjonalną obsługę na najwyższym
-              poziomie.
+            <p className=" leading-loose">
+              Zapewniamy komfort i profesjonalna usługę na najwyższym poziomie.
+              Dokładamy wszelkich starań żeby wasza wizyta była przyjemna a
+              dzieło sztuki zostawione na wasze skórze cieszyło każdego dnia.
+              Wszystkie wykonane przez nas projekty są niepowtarzalne.
             </p>
           </div>
         </div>

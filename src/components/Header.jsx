@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <div className="bg-white">
       <header
-        className="absolute inset-x-0 top-0 z-50"
+        className="absolute inset-x-0 top-0"
         style={{ backgroundColor: "rgb(244, 244, 234)" }}>
         <nav
           className="flex items-center justify-between p-3 lg:px-8"
