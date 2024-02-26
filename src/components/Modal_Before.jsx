@@ -4,8 +4,24 @@ function Modal2({ isOpen, toggleModal }) {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className="bg-white p-8 rounded-lg max-w-lg">
+        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center">
+          <div className="relative p-8 bg-white rounded-lg w-full max-w-md">
+            <div className="absolute top-0 right-0 p-2">
+              <button
+                onClick={toggleModal}
+                className="text-gray-500 hover:text-gray-700">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Jak przygotować się do sesji tatuażu ?
             </h2>
