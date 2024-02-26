@@ -4,7 +4,7 @@ function Modal2({ isOpen, toggleModal }) {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center pt-10 pl-4 pr-4 pb-4">
           <div className="relative p-8 bg-white rounded-lg w-full max-w-md">
             <div className="absolute top-0 right-0 p-2">
               <button
