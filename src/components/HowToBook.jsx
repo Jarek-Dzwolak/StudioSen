@@ -81,7 +81,7 @@ function HowToBook() {
             <img
               src={BookingPhoto}
               alt="Lokalizacja 2"
-              className="w-full h-auto rounded-lg "
+              className="max-w-xl h-auto rounded-lg "
             />
           </div>
         </div>
