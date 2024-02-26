@@ -1,4 +1,4 @@
-import Photo from "../img/Jola_photo.jpeg";
+import Photo from "../img/care.jpg";
 
 function Care() {
   return (
@@ -57,7 +57,7 @@ function Care() {
               <div>
                 <h2 className="text-3xl font-bold mt-6 mb-3">Nawiliżenie</h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  jak często nawilżać tatuaż ? Tatuaż smarujemy 2-3 razy
+                  Jak często nawilżać tatuaż ? Tatuaż smarujemy 2-3 razy
                   dziennie przez okres minimum 2 tygodnie. Nie dopuszczamy do
                   przesuszenia skóry ani również do jej rozmoknięcia. Po
                   zagojeniu tatuażu należy stosować kremy z filtrem spf 50.

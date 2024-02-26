@@ -14,14 +14,9 @@ const navigation = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [menuOpenState, setMenuOpenState] = useState(false);
-  useEffect(() => {
-    setMenuOpenState(mobileMenuOpen);
-  }, [mobileMenuOpen]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    setMenuOpenState(!mobileMenuOpen);
   };
 
   const handleLinkClick = () => {
@@ -39,7 +34,7 @@ const Header = () => {
           className="flex items-center justify-between p-3 lg:px-8"
           aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img className="w-14" src={Logo} alt="Company Logo" />
             </a>
@@ -66,9 +61,7 @@ const Header = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900">
+            <a className="text-sm font-semibold leading-6 text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>

@@ -52,7 +52,16 @@ function HowToBook() {
             </div>
             <h3 className="text-xl font-semibold mb-4">Proces:</h3>
             <ul className="list-decimal text-gray-700 leading-relaxed mb-6 pl-4">
-              <li>Zgłaszasz nam chęć wykonania tatuażu.</li>
+              <li>
+                Zgłaszasz nam chęć wykonania tatuażu.
+                <a
+                  className="text-blue-500 hover:text-blue-700 underline"
+                  href="https://www.instagram.com/sen.studiotatuazu"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  @sen.studiotatuazu
+                </a>
+              </li>
               <li>Szukamy dla Ciebie dogodnego terminu.</li>
               <li>
                 Kilka dni przed sesją przygotowujemy dla Ciebie projekt oraz

@@ -13,7 +13,8 @@ function Modal({ isOpen, toggleModal }) {
               Jeśli masz zapał do pracy i chcesz dołączyć do naszej kreatywnej
               ekipy, nie wahaj się skontaktować z nami. Jesteśmy otwarci na
               wszelkie formy współpracy i czekamy na Twoją inicjatywę.
-              Zapraszamy do kontaktu pod adresem <b>email@example.com.</b>
+              Zapraszamy do kontaktu pod adresem{" "}
+              <b>studiotatuazusen@gmail.com</b>
             </p>
             <button
               className="mt-6 inline-block px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-600"
