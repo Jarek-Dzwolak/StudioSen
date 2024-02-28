@@ -18,7 +18,7 @@ function Team() {
     },
     {
       name: "Jarek Dzwolak",
-      role: "Współwłaściciel / Mendżer",
+      role: "Współwłaściciel / Manager",
       imageUrl: Jarek_photo,
     },
   ];
