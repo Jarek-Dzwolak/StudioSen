@@ -21,13 +21,13 @@ function AboutUs() {
               która zdecyduje się skorzystać z naszych usług. Szczycimy się
               indywidualnym podejściem do klienta. Rozumiemy, że każdy ma inne
               potrzeby i oczekiwania, dlatego dokładamy wszelkich starań, by
-              sprostać oczekiwaniom każdego , kto przekracza nasz próg. Do
+              sprostać oczekiwaniom każdego, kto przekracza nasz próg. Do
               każdego projektu podchodzimy personalnie – Wasze zadowolenie z
               wykonanej pracy to nasz priorytet.
             </p>
             <p className=" leading-loose">
               Zapewniamy komfort i profesjonalną usługę na najwyższym poziomie.
-              Dokładamy wszelkich starań żeby wasza wizyta była przyjemna a
+              Dokładamy wszelkich starań żeby wasza wizyta była przyjemna, a
               dzieło sztuki zostawione na wasze skórze cieszyło każdego dnia.
               Wszystkie wykonane przez nas projekty są niepowtarzalne.
             </p>

@@ -68,7 +68,7 @@ function HowToBook() {
                 podsyłamy go do akceptacji.
               </li>
               <li>
-                Spotykamy się w studio gdzie dobieramy odpowiedni rozmiar wzoru
+                Spotykamy się w studio, gdzie dobieramy odpowiedni rozmiar wzoru
                 oraz uzgadniamy szczegóły.
               </li>
               <li>

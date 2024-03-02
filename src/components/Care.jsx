@@ -1,4 +1,4 @@
-import Photo from "../img/care.jpg";
+import Photo from "../img/care.jpeg";
 
 function Care() {
   return (
@@ -54,18 +54,35 @@ function Care() {
               </b>
             </p>
             <div>
-              <h2 className="text-3xl font-bold mt-6 mb-3">Nawiliżenie</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Jak często nawilżać tatuaż ? Tatuaż smarujemy 2-3 razy dziennie
-                przez okres minimum 2 tygodnie. Nie dopuszczamy do przesuszenia
-                skóry ani również do jej rozmoknięcia. Po zagojeniu tatuażu
-                należy stosować kremy z filtrem spf 50. Czego unikać ? - Przez
-                pierwsze 2-3 dni nie spożywaj alkoholu. - Przez pierwszy tydzień
-                unikaj wysiłku fizycznego. - Przez pierwsze 2 tygodnie unikamy
-                długich kąpieli i gorących kąpieli - Przez 3 tygodnie unikaj
-                słońca, solarium oraz kąpieli w basenach, jeziorach, morzach
-                itp.
-              </p>
+              <h2 className="text-xl font-bold mt-6 mb-3">
+                Jak często nawilżać tatuaż ?
+              </h2>
+              <ul className="text-gray-700 leading-relaxed mb-6">
+                <li>
+                  Tatuaż smarujemy 2-3 razy dziennie przez okres minimum 2
+                  tygodnie.
+                </li>
+                <li>
+                  Nie dopuszczamy do przesuszenia skóry ani również do jej
+                  rozmoknięcia.
+                </li>
+                <li>
+                  Po zagojeniu tatuażu należy stosować kremy z filtrem spf 50.
+                </li>
+              </ul>
+              <h2 className="text-xl font-bold mt-6 mb-3"> Czego unikać ?</h2>
+              <ul className="text-gray-700 leading-relaxed mb-6">
+                <li>Przez pierwsze 2-3 dni nie spożywaj alkoholu.</li>
+                <li>Przez pierwszy tydzień unikaj wysiłku fizycznego.</li>
+                <li>
+                  Przez pierwsze 2 tygodnie unikamy długich kąpieli i gorących
+                  kąpieli.
+                </li>
+                <li>
+                  Przez 3 tygodnie unikaj słońca, solarium oraz kąpieli w
+                  basenach, jeziorach, morzach itp.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
