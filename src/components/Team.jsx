@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "./Modal_Team";
 import Jarek_photo from "../img/Jarek.jpg";
 import Jola_photo from "../img/Jola_photo.jpeg";
+import Julia_photo from "../img/JuliaProfilowe.jpg";
 
 function Team() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,6 +21,11 @@ function Team() {
       name: "Jarek Dzwolak",
       role: "Współwłaściciel / Manager",
       imageUrl: Jarek_photo,
+    },
+    {
+      name: "Julia Piwowar",
+      role: "Tatuażysta",
+      imageUrl: Julia_photo,
     },
   ];
 
