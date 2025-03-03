@@ -1,15 +1,19 @@
 import React from "react";
-import Header from "../src/components/Header";
-import Team from "./components/Team";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Team from "./components/Team";
 import AboutUs from "./components/AboutUs";
 import HowToBook from "./components/HowToBook";
 import Location from "./components/Location";
 import Care from "./components/Care";
+import PercingPage from "./components/PercingPage";
+import FloatingButton from "./components/FloatingButton";
 
-function App() {
+// Komponent dla strony głównej, który zawiera wszystkie sekcje
+const Home = () => {
   return (
-    <div className="App">
+    <>
       <Header />
       <AboutUs />
       <HowToBook />
@@ -17,7 +21,21 @@ function App() {
       <Location />
       <Team />
       <Footer />
-    </div>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/percing" element={<PercingPage />} />
+        </Routes>
+        <FloatingButton />
+      </div>
+    </Router>
   );
 }
 
