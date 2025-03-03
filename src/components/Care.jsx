@@ -1,4 +1,4 @@
-import Photo from "../img/care.jpeg";
+import Photo from "../img/care.jpg";
 
 function Care() {
   return (

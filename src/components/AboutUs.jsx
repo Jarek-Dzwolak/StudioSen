@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../img/Full-logo.png";
-import BackgroundPhoto from "../img/background-gradient.jpeg";
+import BackgroundPhoto from "../img/background-gradient.jpg";
 
 function AboutUs() {
   return (

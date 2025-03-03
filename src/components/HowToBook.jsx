@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BookingPhoto from "../img/booking.jpeg";
+import BookingPhoto from "../img/booking.jpg";
 import Modal from "../components/Modal_Book";
 import Modal2 from "./Modal_Before";
 
