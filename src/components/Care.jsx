@@ -2,7 +2,7 @@ import Photo from "../img/care.jpeg";
 
 function Care() {
   return (
-    <section id="#Care" className="py-12 md:flex md:items-center">
+    <section id="Care" className="py-12 md:flex md:items-center">
       <div className="container mx-auto px-4">
         <div className="grid flex-box grid-cols-1 md:grid-cols-2 gap-8">
           <div>

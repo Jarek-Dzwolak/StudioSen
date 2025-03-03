@@ -5,7 +5,7 @@ import BackgroundPhoto from "../img/background-gradient.jpeg";
 function AboutUs() {
   return (
     <section
-      id="#AboutUs"
+      id="AboutUs"
       className="py-16 sm:py-32 bg-cover bg-center"
       style={{ backgroundImage: `url(${BackgroundPhoto})` }}
     >
@@ -21,8 +21,8 @@ function AboutUs() {
           </div>
 
           <div>
-            <h2 className="text-3xl  font-bold mb-4">O nas</h2>
-            <p className=" leading-loose mb-6">
+            <h2 className="text-3xl font-bold mb-4">O nas</h2>
+            <p className="leading-loose mb-6">
               Naszą główną misją jest zapewnienie satysfakcji każdej osobie
               która zdecyduje się skorzystać z naszych usług. Szczycimy się
               indywidualnym podejściem do klienta. Rozumiemy, że każdy ma inne
@@ -31,7 +31,7 @@ function AboutUs() {
               każdego projektu podchodzimy personalnie – Wasze zadowolenie z
               wykonanej pracy to nasz priorytet.
             </p>
-            <p className=" leading-loose">
+            <p className="leading-loose">
               Zapewniamy komfort i profesjonalną usługę na najwyższym poziomie.
               Dokładamy wszelkich starań żeby wasza wizyta była przyjemna, a
               dzieło sztuki zostawione na wasze skórze cieszyło każdego dnia.

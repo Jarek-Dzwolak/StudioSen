@@ -17,7 +17,7 @@ function HowToBook() {
 
   return (
     <section
-      id="#HowToBook"
+      id="HowToBook"
       className="py-12 md:flex md:items-center"
       style={{ backgroundColor: "rgb(244, 244, 234)" }}
     >

@@ -38,7 +38,7 @@ const HowToBookPercing = () => {
           </h3>
           <p className="mt-2 text-base leading-7 text-gray-600">
             Zadzwoń do nas lub napisz wiadomość aby umówić termin. Odpowiemy
-            najpózniej w przeciągu kilku godzin.
+            najpóźniej w przeciągu kilku godzin.
           </p>
         </div>
 
