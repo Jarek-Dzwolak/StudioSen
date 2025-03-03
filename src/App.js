@@ -10,7 +10,11 @@ const HowToBook = lazy(() => import("./components/HowToBook"));
 const Care = lazy(() => import("./components/Care"));
 const Location = lazy(() => import("./components/Location"));
 const Team = lazy(() => import("./components/Team"));
-const PercingPage = lazy(() => import("./components/PercingPage"));
+
+// Komponenty dla strony percingu
+const AboutPercing = lazy(() => import("./components/AboutPercing"));
+const HowToBookPercing = lazy(() => import("./components/HowToBookPercing"));
+const PricingPercing = lazy(() => import("./components/PricingPercing"));
 
 // Komponent ładujący
 const LoadingFallback = () => (
@@ -23,7 +27,6 @@ const LoadingFallback = () => (
 const Home = () => {
   return (
     <>
-      <Header />
       <h1 className="sr-only">Studio Sen - Profesjonalne Studio Tatuażu</h1>
       <Suspense fallback={<LoadingFallback />}>
         <AboutUs />
@@ -32,6 +35,30 @@ const Home = () => {
         <Location />
         <Team />
       </Suspense>
+    </>
+  );
+};
+
+// Komponent dla strony percingu
+const PercingPage = () => {
+  return (
+    <>
+      <h1 className="sr-only">Studio Sen - Profesjonalny Percing</h1>
+      <Suspense fallback={<LoadingFallback />}>
+        <AboutPercing />
+        <HowToBookPercing />
+        <PricingPercing />
+      </Suspense>
+    </>
+  );
+};
+
+// Komponent layoutu, który zawiera Header i Footer
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="pt-16 bg-[rgb(244,244,234)]">{children}</div>
       <Footer />
     </>
   );
@@ -42,13 +69,20 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <Home />
+              </Layout>
+            }
+          />
           <Route
             path="/percing"
             element={
-              <Suspense fallback={<LoadingFallback />}>
+              <Layout>
                 <PercingPage />
-              </Suspense>
+              </Layout>
             }
           />
         </Routes>
