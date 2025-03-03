@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../img/Logo.png";
+import Logo from "../img/Logo.png"; // Zmieniona wersja na WebP (musisz utworzyć ten plik)
+import LogoFallback from "../img/Logo.png"; // Oryginalna wersja jako fallback
 
 // Nawigacja dla strony głównej (tatuaże)
 const tattooNavigation = [
@@ -86,12 +87,22 @@ const Header = () => {
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="w-14"
-                src={Logo}
-                alt="Company Logo"
-                loading="lazy"
-              />
+              {/* Logo z określonymi wymiarami */}
+              <div style={{ width: "56px", height: "56px" }}>
+                {" "}
+                {/* w-14 = 3.5rem = ~56px */}
+                <picture>
+                  <source srcSet={Logo} type="image/webp" />
+                  <img
+                    className="w-full h-full"
+                    src={LogoFallback}
+                    alt="Company Logo"
+                    loading="eager" /* Zmieniono na eager dla logo w headerze */
+                    width="56"
+                    height="56"
+                  />
+                </picture>
+              </div>
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -139,12 +150,20 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="w-14"
-                  src={Logo}
-                  alt="Company Logo"
-                  loading="lazy"
-                />
+                {/* Logo z określonymi wymiarami w menu mobilnym */}
+                <div style={{ width: "56px", height: "56px" }}>
+                  <picture>
+                    <source srcSet={Logo} type="image/webp" />
+                    <img
+                      className="w-full h-full"
+                      src={LogoFallback}
+                      alt="Company Logo"
+                      loading="eager"
+                      width="56"
+                      height="56"
+                    />
+                  </picture>
+                </div>
               </Link>
               <button
                 type="button"
