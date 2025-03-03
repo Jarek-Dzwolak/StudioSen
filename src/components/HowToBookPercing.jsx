@@ -112,7 +112,7 @@ const HowToBookPercing = () => {
                 <p className="mt-1 text-gray-600">
                   Zadzwoń pod numer{" "}
                   <a
-                    href="tel:509233128"
+                    href="tel:536961364"
                     className="font-semibold text-black hover:underline"
                   >
                     536961364

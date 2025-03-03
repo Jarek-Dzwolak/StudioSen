@@ -153,7 +153,7 @@ const PricingPercing = () => {
           Masz pytania dotyczące naszych usług lub cen?
         </p>
         <a
-          href="tel:+48509233128"
+          href="tel:+48536961364"
           className="rounded-md bg-black px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         >
           Skontaktuj się z nami
