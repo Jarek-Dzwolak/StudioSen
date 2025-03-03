@@ -52,7 +52,12 @@ const Header = () => {
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="w-14" src={Logo} alt="Company Logo" />
+              <img
+                className="w-14"
+                src={Logo}
+                alt="Company Logo"
+                loading="lazy"
+              />
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -98,7 +103,12 @@ const Header = () => {
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5 ">
                 <span className="sr-only">Your Company</span>
-                <img className="w-14" src={Logo} alt="Company Logo" />
+                <img
+                  className="w-14"
+                  src={Logo}
+                  alt="Company Logo"
+                  loading="lazy"
+                />
               </Link>
               <button
                 type="button"

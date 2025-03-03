@@ -10,6 +10,7 @@ function Care() {
               src={Photo}
               alt="Lokalizacja 2"
               className="w-full h-auto rounded-lg "
+              loading="lazy"
             />
           </div>
           <div>

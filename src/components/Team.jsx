@@ -49,6 +49,7 @@ function Team() {
                   className="h-16 w-16 rounded-full"
                   src={person.imageUrl}
                   alt=""
+                  loading="lazy"
                 />
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
@@ -65,7 +66,8 @@ function Team() {
         <div className="flex justify-center md:justify-start">
           <button
             className="flex items-center justify-center px-4 py-2.5 lg:px-6 lg:py-4 text-lg text-black font-medium rounded-full duration-300 bg-gray-400 hover:bg-gray-600"
-            onClick={toggleModal}>
+            onClick={toggleModal}
+          >
             Dołącz do nas
           </button>
         </div>

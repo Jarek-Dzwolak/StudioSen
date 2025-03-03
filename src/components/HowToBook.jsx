@@ -19,7 +19,8 @@ function HowToBook() {
     <section
       id="#HowToBook"
       className="py-12 md:flex md:items-center"
-      style={{ backgroundColor: "rgb(244, 244, 234)" }}>
+      style={{ backgroundColor: "rgb(244, 244, 234)" }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid flex-box grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:order-first">
@@ -36,17 +37,20 @@ function HowToBook() {
 
             <div
               className="flex justify-center gap-8 mb-4 
-             md:justify-start">
+             md:justify-start"
+            >
               <button
                 className="flex items-center justify-center 
                  px-4 py-2.5 lg:px-6 lg:py-4 text-lg text-black font-medium rounded-full duration-300 bg-gray-400 hover:bg-gray-600"
-                onClick={toggleFirstModal}>
+                onClick={toggleFirstModal}
+              >
                 Przeciwwskazania
               </button>
               <button
                 className="flex items-center justify-center 
                  px-4 py-2.5 lg:px-6 lg:py-4 text-lg text-black font-medium rounded-full duration-300 bg-gray-400 hover:bg-gray-600"
-                onClick={toggleSecondModal}>
+                onClick={toggleSecondModal}
+              >
                 Przed sesją
               </button>
             </div>
@@ -58,7 +62,8 @@ function HowToBook() {
                   className="text-blue-500 hover:text-blue-700 underline"
                   href="https://www.instagram.com/sen.studiotatuazu"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   @sen.studiotatuazu
                 </a>
               </li>
@@ -82,6 +87,7 @@ function HowToBook() {
               src={BookingPhoto}
               alt="Lokalizacja 2"
               className="w-full h-auto rounded-lg "
+              loading="lazy"
             />
           </div>
         </div>

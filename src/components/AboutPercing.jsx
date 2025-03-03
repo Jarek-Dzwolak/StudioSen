@@ -42,8 +42,9 @@ const AboutPercing = () => {
             </h3>
           </div>
           <p className="text-base leading-7 text-gray-600">
-            Nasi piercerzy mają wieloletnie doświadczenie i regularnie podnoszą
-            swoje kwalifikacje, aby zapewnić najwyższą jakość usług.
+            Nasi piercerzy zostali przeszkoleni przez specjalistów z wieloletnim
+            doświadczeniem, łącząc wiedzę teoretyczną z intensywną praktyką, aby
+            zapewnić najwyższą jakość usług.
           </p>
         </div>
 

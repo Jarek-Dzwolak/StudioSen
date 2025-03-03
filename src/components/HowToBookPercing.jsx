@@ -37,8 +37,8 @@ const HowToBookPercing = () => {
             Skontaktuj się z nami
           </h3>
           <p className="mt-2 text-base leading-7 text-gray-600">
-            Zadzwoń do nas lub napisz wiadomość aby umówić termin. Możesz też
-            skorzystać z formularza kontaktowego na naszej stronie.
+            Zadzwoń do nas lub napisz wiadomość aby umówić termin. Odpowiemy
+            najpózniej w przeciągu kilku godzin.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const HowToBookPercing = () => {
                     href="tel:509233128"
                     className="font-semibold text-black hover:underline"
                   >
-                    509 233 128
+                    536961364
                   </a>
                 </p>
               </div>

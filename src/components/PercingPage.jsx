@@ -12,6 +12,7 @@ const PercingPage = () => {
       <div className="pt-16">
         {" "}
         {/* Dodajemy padding-top, aby treść nie była przykryta przez header */}
+        <h1 className="sr-only">Studio Sen - Profesjonalny Percing</h1>
         <AboutPercing />
         <HowToBookPercing />
         <PricingPercing />

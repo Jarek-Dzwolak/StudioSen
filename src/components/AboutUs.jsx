@@ -7,11 +7,17 @@ function AboutUs() {
     <section
       id="#AboutUs"
       className="py-16 sm:py-32 bg-cover bg-center"
-      style={{ backgroundImage: `url(${BackgroundPhoto})` }}>
+      style={{ backgroundImage: `url(${BackgroundPhoto})` }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="max-w-md">
-            <img src={Logo} alt="O nas" className="w-full h-auto rounded-lg" />
+            <img
+              src={Logo}
+              alt="O nas"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
           </div>
 
           <div>
