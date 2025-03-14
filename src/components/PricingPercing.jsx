@@ -45,7 +45,7 @@ const PricingPercing = () => {
               <div className="mt-6 border-t pt-6">
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold">Cena:</span>
-                  <span className="text-xl font-bold">110-140 zł</span>
+                  <span className="text-xl font-bold">110-150 zł</span>
                 </div>
                 <ul className="mt-4 text-gray-600 text-sm space-y-1">
                   <li>* Cena zawiera wysokiej jakości tytanowy kolczyk.</li>
