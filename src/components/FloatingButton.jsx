@@ -9,7 +9,7 @@ const FloatingButton = () => {
 
   // Aktualizuj stan przy każdej zmianie lokalizacji
   useEffect(() => {
-    setIsPercingPage(location.pathname === "/percing");
+    setIsPercingPage(location.pathname === "/piercing");
   }, [location.pathname]);
 
   return (
