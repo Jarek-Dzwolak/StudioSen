@@ -25,7 +25,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const isPercingPage = location.pathname.includes("/percing");
+  const isPercingPage = location.pathname.includes("/piercing");
 
   // Wybierz odpowiednią nawigację w zależności od aktualnej strony
   const navigation = isPercingPage ? percingNavigation : tattooNavigation;
@@ -54,11 +54,11 @@ const Header = () => {
 
     // Sprawdź czy jesteśmy na właściwej stronie
     if (
-      (isPercingPage && location.pathname !== "/percing") ||
+      (isPercingPage && location.pathname !== "/piercing") ||
       (!isPercingPage && location.pathname !== "/")
     ) {
       // Przekierowanie na właściwą stronę z hash
-      const targetPath = isPercingPage ? "/percing" : "/";
+      const targetPath = isPercingPage ? "/piercing" : "/";
       navigate(`${targetPath}#${sectionId}`);
       return;
     }
@@ -127,10 +127,10 @@ const Header = () => {
             ))}
             {/* Link do przeciwnej strony */}
             <Link
-              to={isPercingPage ? "/" : "/percing"}
+              to={isPercingPage ? "/" : "/piercing"}
               className="text-sm font-semibold hover:gray-400 leading-6 cursor-pointer p-1 rounded-3xl hover:bg-gray-50 text-gray-900 menu-link"
             >
-              {isPercingPage ? "Tatuaże" : "Percing"}
+              {isPercingPage ? "Tatuaże" : "Piercing"}
             </Link>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -188,11 +188,11 @@ const Header = () => {
                   ))}
                   {/* Link do przeciwnej strony */}
                   <Link
-                    to={isPercingPage ? "/" : "/percing"}
+                    to={isPercingPage ? "/" : "/piercing"}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 menu-link"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {isPercingPage ? "Tatuaże" : "Percing"}
+                    {isPercingPage ? "Tatuaże" : "Piercing"}
                   </Link>
                 </div>
                 <div className="py-6"></div>

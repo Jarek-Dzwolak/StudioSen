@@ -78,7 +78,7 @@ function App() {
             }
           />
           <Route
-            path="/percing"
+            path="/piercing"
             element={
               <Layout>
                 <PercingPage />
