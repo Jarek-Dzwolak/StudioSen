@@ -6,8 +6,8 @@ import FloatingButton from "./components/FloatingButton";
 
 // Leniwe ładowanie komponentów
 const AboutUs = lazy(() => import("./components/AboutUs"));
+const Gallery = lazy(() => import("./components/Gallery.jsx"));
 const HowToBook = lazy(() => import("./components/HowToBook"));
-const Care = lazy(() => import("./components/Care"));
 const Location = lazy(() => import("./components/Location"));
 const Team = lazy(() => import("./components/Team"));
 
@@ -30,8 +30,8 @@ const Home = () => {
       <h1 className="sr-only">Studio Sen - Profesjonalne Studio Tatuażu</h1>
       <Suspense fallback={<LoadingFallback />}>
         <AboutUs />
+        <Gallery />
         <HowToBook />
-        <Care />
         <Location />
         <Team />
       </Suspense>
