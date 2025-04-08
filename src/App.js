@@ -1,8 +1,15 @@
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { lazy, Suspense, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingButton from "./components/FloatingButton";
+import CookieConsent from "./components/CookieConsent";
+import { initFacebookPixel, disableFacebookPixel } from "./utils/FacebookPixel";
 
 // Leniwe ładowanie komponentów
 const AboutUs = lazy(() => import("./components/AboutUs"));
@@ -13,6 +20,7 @@ const Team = lazy(() => import("./components/Team"));
 
 // Komponenty dla strony percingu
 const AboutPercing = lazy(() => import("./components/AboutPercing"));
+const GalleryPiercing = lazy(() => import("./components/GalleryPiercing"));
 const HowToBookPercing = lazy(() => import("./components/HowToBookPercing"));
 const PricingPercing = lazy(() => import("./components/PricingPercing"));
 
@@ -22,6 +30,20 @@ const LoadingFallback = () => (
     <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-black"></div>
   </div>
 );
+
+// Komponent dla śledzenia zmiany strony (dla Facebook Pixel)
+const RouteChangeTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Przy każdej zmianie lokalizacji uruchamiaj event PageView
+    if (window.fbq) {
+      window.fbq("track", "PageView");
+    }
+  }, [location]);
+
+  return null;
+};
 
 // Komponent dla strony głównej
 const Home = () => {
@@ -46,6 +68,7 @@ const PercingPage = () => {
       <h1 className="sr-only">Studio Sen - Profesjonalny Percing</h1>
       <Suspense fallback={<LoadingFallback />}>
         <AboutPercing />
+        <GalleryPiercing />
         <HowToBookPercing />
         <PricingPercing />
       </Suspense>
@@ -65,9 +88,34 @@ const Layout = ({ children }) => {
 };
 
 function App() {
+  // Facebook Pixel ID - zmień na swój własny identyfikator
+  const FB_PIXEL_ID = "618876082077967";
+
+  // Obsługa zgody na pliki cookie
+  const handleCookieAccept = () => {
+    // Inicjalizuj Facebook Pixel gdy użytkownik zaakceptuje cookies
+    initFacebookPixel(FB_PIXEL_ID);
+  };
+
+  const handleCookieDecline = () => {
+    // Wyłącz Facebook Pixel gdy użytkownik odrzuci cookies
+    disableFacebookPixel();
+  };
+
+  useEffect(() => {
+    // Sprawdź, czy użytkownik już wcześniej zaakceptował cookies
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "accepted") {
+      initFacebookPixel(FB_PIXEL_ID);
+    }
+  }, []);
+
   return (
     <Router>
       <div className="App">
+        {/* Komponent do śledzenia zmian strony */}
+        <RouteChangeTracker />
+
         <Routes>
           <Route
             path="/"
@@ -87,6 +135,12 @@ function App() {
           />
         </Routes>
         <FloatingButton />
+
+        {/* Banner zgody na pliki cookie */}
+        <CookieConsent
+          onAccept={handleCookieAccept}
+          onDecline={handleCookieDecline}
+        />
       </div>
     </Router>
   );

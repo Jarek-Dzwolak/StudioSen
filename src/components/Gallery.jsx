@@ -53,25 +53,25 @@ const Gallery = () => {
             id: 7,
             title: "Linework delikatny",
             artist: "Julia Piwowar",
-            imageUrl: "https://i.ibb.co/yFCThr63/Zdjecie2.jpg", // Tymczasowo użyte zdjęcie Joli, zamień na zdjęcie Juli
+            imageUrl: "https://i.ibb.co/yFCThr63/Zdjecie2.jpg",
           },
           {
             id: 8,
             title: "Wzór mandali",
             artist: "Julia Piwowar",
-            imageUrl: "https://i.ibb.co/twvJrNf8/Zdjecie3.jpg", // Tymczasowo użyte zdjęcie Joli, zamień na zdjęcie Juli
+            imageUrl: "https://i.ibb.co/twvJrNf8/Zdjecie3.jpg",
           },
           {
             id: 9,
             title: "Tatuaż figuratywny",
             artist: "Julia Piwowar",
-            imageUrl: "https://i.ibb.co/B2rmnqx3/Zdjecie4.jpg", // Tymczasowo użyte zdjęcie Joli, zamień na zdjęcie Juli
+            imageUrl: "https://i.ibb.co/B2rmnqx3/Zdjecie4.jpg",
           },
           {
             id: 10,
             title: "Design nowoczesny",
             artist: "Julia Piwowar",
-            imageUrl: "https://i.ibb.co/1fvQM4x2/Zdjecie5.jpg", // Tymczasowo użyte zdjęcie Joli, zamień na zdjęcie Juli
+            imageUrl: "https://i.ibb.co/1fvQM4x2/Zdjecie5.jpg",
           },
         ];
 
