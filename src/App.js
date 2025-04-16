@@ -4,14 +4,17 @@ import {
   Route,
   Routes,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingButton from "./components/FloatingButton";
 import CookieConsent from "./components/CookieConsent";
 import { initFacebookPixel, disableFacebookPixel } from "./utils/FacebookPixel";
+import { AuthProvider } from "./contexts/AuthContext";
+import ProtectedRoute from "./components/Auth/ProtectedRoute";
 
-// Leniwe ładowanie komponentów
+// Leniwe ładowanie komponentów strony głównej
 const AboutUs = lazy(() => import("./components/AboutUs"));
 const Gallery = lazy(() => import("./components/Gallery.jsx"));
 const HowToBook = lazy(() => import("./components/HowToBook"));
@@ -23,6 +26,18 @@ const AboutPercing = lazy(() => import("./components/AboutPercing"));
 const GalleryPiercing = lazy(() => import("./components/GalleryPiercing"));
 const HowToBookPercing = lazy(() => import("./components/HowToBookPercing"));
 const PricingPercing = lazy(() => import("./components/PricingPercing"));
+
+// Komponenty systemu zarządzania
+const Login = lazy(() => import("./components/Auth/Login"));
+const DashboardLayout = lazy(() =>
+  import("./components/Dashboard/DashboardLayout")
+);
+const DashboardHome = lazy(() =>
+  import("./components/Dashboard/DashboardHome")
+);
+const ClientsView = lazy(() => import("./components/Dashboard/ClientsView"));
+const PaymentsView = lazy(() => import("./components/Dashboard/PaymentsView"));
+const ReportsView = lazy(() => import("./components/Dashboard/ReportsView"));
 
 // Komponent ładujący
 const LoadingFallback = () => (
@@ -112,36 +127,102 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        {/* Komponent do śledzenia zmian strony */}
-        <RouteChangeTracker />
+      <AuthProvider>
+        <div className="App">
+          {/* Komponent do śledzenia zmian strony */}
+          <RouteChangeTracker />
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout>
-                <Home />
-              </Layout>
-            }
-          />
-          <Route
-            path="/piercing"
-            element={
-              <Layout>
-                <PercingPage />
-              </Layout>
-            }
-          />
-        </Routes>
-        <FloatingButton />
+          <Routes>
+            {/* Strony publiczne */}
+            <Route
+              path="/"
+              element={
+                <Layout>
+                  <Home />
+                </Layout>
+              }
+            />
+            <Route
+              path="/piercing"
+              element={
+                <Layout>
+                  <PercingPage />
+                </Layout>
+              }
+            />
 
-        {/* Banner zgody na pliki cookie */}
-        <CookieConsent
-          onAccept={handleCookieAccept}
-          onDecline={handleCookieDecline}
-        />
-      </div>
+            {/* Strona logowania */}
+            <Route
+              path="/login"
+              element={
+                <Suspense fallback={<LoadingFallback />}>
+                  <Login />
+                </Suspense>
+              }
+            />
+
+            {/* Zabezpieczone strony panelu administratora */}
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Suspense fallback={<LoadingFallback />}>
+                    <DashboardLayout />
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            >
+              <Route
+                index
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <DashboardHome />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="clients"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <ClientsView />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="payments"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <PaymentsView />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="reports"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <ReportsView />
+                  </Suspense>
+                }
+              />
+            </Route>
+
+            {/* Przekierowanie na login, gdy użytkownik próbuje wejść na niezdefiniowaną stronę panelu */}
+            <Route path="/dashboard/*" element={<Navigate to="/login" />} />
+          </Routes>
+
+          {/* Przycisk zmiany strony dostępny tylko na stronach głównych */}
+          <Routes>
+            <Route path="/" element={<FloatingButton />} />
+            <Route path="/piercing" element={<FloatingButton />} />
+          </Routes>
+
+          {/* Banner zgody na pliki cookie */}
+          <CookieConsent
+            onAccept={handleCookieAccept}
+            onDecline={handleCookieDecline}
+          />
+        </div>
+      </AuthProvider>
     </Router>
   );
 }
