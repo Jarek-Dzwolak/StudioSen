@@ -5,14 +5,14 @@ import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Firebase configuration
+// Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyCLIhmcwo9LB-XRaP1RCQkIKeQqb_RZS6c",
-  authDomain: "studio-sen-system.firebaseapp.com",
-  projectId: "studio-sen-system",
-  storageBucket: "studio-sen-system.firebasestorage.app",
-  messagingSenderId: "373466452016",
-  appId: "1:373466452016:web:821ade990077c83fbf9df5",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // Inicjalizuj Firebase tylko jeśli nie został już zainicjalizowany
